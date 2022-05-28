@@ -15,6 +15,35 @@ router.get("/get-all-audio", (req, res, next) => {
     });
 });
 
+router.get("/get-pop-audio", (req, res, next) => {
+  Audio.find({ audioGenre: "pop" })
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
+
+router.get("/get-rock-audio", (req, res, next) => {
+  Audio.find({ audioGenre: "rock" })
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
+
+router.get("/get-jazz-audio", (req, res, next) => {
+  Audio.find({ audioGenre: "jazz" })
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
 router.get("/get-one-audio/:audioID", (req, res, next) => {
   const audoiID = req.params.audioID;
 
