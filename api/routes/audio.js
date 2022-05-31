@@ -1,6 +1,5 @@
 const express = require("express");
 const Audio = require("../models/audio");
-const User = require("../models/user");
 const uploadAudio = require("../middleware/multer");
 
 const router = express.Router();
@@ -15,8 +14,8 @@ router.get("/get-all-audio", (req, res, next) => {
     });
 });
 
-router.get("/get-pop-audio", (req, res, next) => {
-  Audio.find({ audioGenre: "pop" })
+router.get("/get-angry-audio", (req, res, next) => {
+  Audio.find({ audioGenre: "angry" })
     .then((result) => {
       res.status(200).json(result);
     })
@@ -25,8 +24,8 @@ router.get("/get-pop-audio", (req, res, next) => {
     });
 });
 
-router.get("/get-rock-audio", (req, res, next) => {
-  Audio.find({ audioGenre: "rock" })
+router.get("/get-joy-audio", (req, res, next) => {
+  Audio.find({ audioGenre: "joy" })
     .then((result) => {
       res.status(200).json(result);
     })
@@ -35,8 +34,8 @@ router.get("/get-rock-audio", (req, res, next) => {
     });
 });
 
-router.get("/get-jazz-audio", (req, res, next) => {
-  Audio.find({ audioGenre: "jazz" })
+router.get("/get-sad-audio", (req, res, next) => {
+  Audio.find({ audioGenre: "sad" })
     .then((result) => {
       res.status(200).json(result);
     })
