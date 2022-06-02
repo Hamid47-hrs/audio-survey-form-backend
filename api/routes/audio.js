@@ -14,8 +14,10 @@ router.get("/get-all-audio", (req, res, next) => {
     });
 });
 
-router.get("/get-angry-audio", (req, res, next) => {
-  Audio.find({ audioGenre: "angry" })
+router.get("/get-audios/:genre", (req, res, next) => {
+  const genre = req.params.genre;
+
+  Audio.find({ audioGenre: genre })
     .then((result) => {
       res.status(200).json(result);
     })
@@ -24,26 +26,7 @@ router.get("/get-angry-audio", (req, res, next) => {
     });
 });
 
-router.get("/get-joy-audio", (req, res, next) => {
-  Audio.find({ audioGenre: "joy" })
-    .then((result) => {
-      res.status(200).json(result);
-    })
-    .catch((err) => {
-      res.status(500).json(err);
-    });
-});
-
-router.get("/get-sad-audio", (req, res, next) => {
-  Audio.find({ audioGenre: "sad" })
-    .then((result) => {
-      res.status(200).json(result);
-    })
-    .catch((err) => {
-      res.status(500).json(err);
-    });
-});
-router.get("/get-one-audio/:audioID", (req, res, next) => {
+router.get("/get-audio/:audioID", (req, res, next) => {
   const audoiID = req.params.audioID;
 
   Audio.findById(audoiID)
