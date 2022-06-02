@@ -15,161 +15,158 @@ const userSchema = new Schema({
     type: Number,
     required: true,
   },
-  popMusic_1: [
-    {
-      _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Audio",
-        required: true,
+  angry_1: {
+    audios: [
+      {
+        name: {
+          type: String,
+          required: true,
+        },
+        rate: {
+          type: Number,
+          required: true,
+        },
       },
-      name: {
-        type: String,
-        required: true,
-      },
-      rate: {
-        type: Number,
-        required: true,
-      },
+    ],
+    comment: {
+      type: String,
     },
-  ],
-  popMusic_2: [
-    {
-      _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Audio",
-        required: true,
+  },
+  angry_2: {
+    audios: [
+      {
+        name: {
+          type: String,
+          required: true,
+        },
+        rate: {
+          type: Number,
+          required: true,
+        },
       },
-      name: {
-        type: String,
-        required: true,
-      },
-      rate: {
-        type: Number,
-        required: true,
-      },
+    ],
+    comment: {
+      type: String,
     },
-  ],
-  popMusic_3: [
-    {
-      _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Audio",
-        required: true,
+  },
+  angry_3: {
+    audios: [
+      {
+        name: {
+          type: String,
+          required: true,
+        },
+        rate: {
+          type: Number,
+          required: true,
+        },
       },
-      name: {
-        type: String,
-        required: true,
-      },
-      rate: {
-        type: Number,
-        required: true,
-      },
+    ],
+    comment: {
+      type: String,
     },
-  ],
-  rockMusic_1: [
-    {
-      _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Audio",
-        required: true,
+  },
+  joy_1: {
+    audios: [
+      {
+        name: {
+          type: String,
+          required: true,
+        },
+        rate: {
+          type: Number,
+          required: true,
+        },
       },
-      name: {
-        type: String,
-        required: true,
-      },
-      rate: {
-        type: Number,
-        required: true,
-      },
+    ],
+    comment: {
+      type: String,
     },
-  ],
-  rockMusic_2: [
-    {
-      _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Audio",
-        required: true,
+  },
+  joy_2: {
+    audios: [
+      {
+        name: {
+          type: String,
+          required: true,
+        },
+        rate: {
+          type: Number,
+          required: true,
+        },
       },
-      name: {
-        type: String,
-        required: true,
-      },
-      rate: {
-        type: Number,
-        required: true,
-      },
+    ],
+    comment: {
+      type: String,
     },
-  ],
-  rockMusic_3: [
-    {
-      _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Audio",
-        required: true,
+  },
+  joy_3: {
+    audios: [
+      {
+        name: {
+          type: String,
+          required: true,
+        },
+        rate: {
+          type: Number,
+          required: true,
+        },
       },
-      name: {
-        type: String,
-        required: true,
-      },
-      rate: {
-        type: Number,
-        required: true,
-      },
+    ],
+    comment: {
+      type: String,
     },
-  ],
-  jazzMusic_1: [
-    {
-      _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Audio",
-        required: true,
+  },
+  sad_1: {
+    audios: [
+      {
+        name: {
+          type: String,
+          required: true,
+        },
+        rate: {
+          type: Number,
+          required: true,
+        },
       },
-      name: {
-        type: String,
-        required: true,
-      },
-      rate: {
-        type: Number,
-        required: true,
-      },
+    ],
+    comment: {
+      type: String,
     },
-  ],
-  jazzMusic_2: [
-    {
-      _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Audio",
-        required: true,
+  },
+  sad_2: {
+    audios: [
+      {
+        name: {
+          type: String,
+          required: true,
+        },
+        rate: {
+          type: Number,
+          required: true,
+        },
       },
-      name: {
-        type: String,
-        required: true,
-      },
-      rate: {
-        type: Number,
-        required: true,
-      },
+    ],
+    comment: {
+      type: String,
     },
-  ],
-  jazzMusic_3: [
-    {
-      _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Audio",
-        required: true,
+  },
+  sad_3: {
+    audios: [
+      {
+        name: {
+          type: String,
+          required: true,
+        },
+        rate: {
+          type: Number,
+          required: true,
+        },
       },
-      name: {
-        type: String,
-        required: true,
-      },
-      rate: {
-        type: Number,
-        required: true,
-      },
+    ],
+    comment: {
+      type: String,
     },
-  ],
-  comment: {
-    type: String,
   },
 });
 
