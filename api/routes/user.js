@@ -44,4 +44,14 @@ router.get("/get-user-data/:userID", (req, res, next) => {
     });
 });
 
+router.get("/get-all-data", (req, res, next) => {
+  User.find()
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      res.status(200).json(err);
+    });
+});
+
 module.exports = router;
